@@ -1,2 +1,46 @@
 # TFC-Smithing-Calculator
-A C++ Program which can assist in calculating the best scheme for smithing.
+一个可以帮助计算群峦传说中锻造的最佳方案的小程序.
+
+## 使用方法
+
+**模式 1: 控制台输入**
+
+直接运行 `TFC-Smithing-Calculator.exe` 即可.
+
+**模式 2: 文件输入**
+
+使用控制台运行，在程序所在文件夹下 `Shift + 右键` 选择 `在此处打开命令窗口` 后进行操作.
+
+输入 `TFC-Smithing-Calculator <输入文件名> <输出文件名>` 运行程序.
+
+## 输入格式
+
+对于任意一种模式，采用如下输入格式：
+
+  1. 输入一个非负整数——测试数据的组数.
+  2. 对于每组数据，首先输入锻造的目标数值，这个数值可以通过试验得出.
+  3. 之后输入三个整数，代表砧 GUI 上所写的需求的最后三步
+
+之后程序会在窗口或者文件中输出每组数据的最优解.
+
+<p style="color: red">请注意，不正确的输入可能会导致程序卡死或崩溃.</p>
+
+## 修改/编译
+
+程序使用 C++ 编写，请在编译时尽量使用 C++14 及以上标准.
+
+样例: `g++ Main.cpp -o Main -std=c++14`
+
+## 进阶：计算最小值
+
+**此步骤需要基础的编程能力.**
+
+在程序源代码 `Main.cpp` 中取消开头部分 `#define COUNTMIN` 的注释，重新编译即可使用计算最小值功能.
+
+该功能会计算给定所有数据集合的最小值，即程序只会输出一组结果.
+
+## 使用例
+
+![](https://wkphoto.cdn.bcebos.com/f3d3572c11dfa9ec47c32f7472d0f703908fc1e0.jpg)
+
+![](https://wkphoto.cdn.bcebos.com/908fa0ec08fa513df34715bd2d6d55fbb3fbd9e0.jpg)
