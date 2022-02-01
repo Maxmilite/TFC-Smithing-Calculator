@@ -176,30 +176,38 @@ int main(int argc, char* argv[]) {
         
         if (argc == 1) {
             cout << Utf8ToGbk("第 ").c_str() << ++cas << Utf8ToGbk(" 组数据: ").c_str() << endl;
-            cout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
-            for (string i : res)
-            // printf("%s → ", i.c_str());
-                cout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
-            // cout << Utf8ToGbk("最后三步") << endl;
-            for (int j = 2; j >= 0; --j) {
-                cout << Utf8ToGbk(finder::find(requirement[j]));
-                if (j)
-                    cout << Utf8ToGbk(rightArrow);
+            if (bestTimes != 114514) {
+                cout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
+                for (string i : res)
+                // printf("%s → ", i.c_str());
+                    cout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
+                // cout << Utf8ToGbk("最后三步") << endl;
+                for (int j = 2; j >= 0; --j) {
+                    cout << Utf8ToGbk(finder::find(requirement[j]));
+                    if (j)
+                        cout << Utf8ToGbk(rightArrow);
+                }
+                cout << endl << endl;
+            } else {
+                cout << Utf8ToGbk("输入数据不存在解法.").c_str() << endl << endl;
             }
-            cout << endl << endl;
         } else {
-            fout << Utf8ToGbk("第 ").c_str() << ++cas << Utf8ToGbk(" 组数据: ").c_str() << endl;
-            fout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
-            for (string i : res)
-            // printf("%s → ", i.c_str());
-                fout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
-            // fout << Utf8ToGbk("最后三步") << endl;
-            for (int j = 2; j >= 0; --j) {
-                fout << Utf8ToGbk(finder::find(requirement[j]));
-                if (j)
-                    fout << Utf8ToGbk(rightArrow);
+            if (bestTimes != 114514) {
+                fout << Utf8ToGbk("第 ").c_str() << ++cas << Utf8ToGbk(" 组数据: ").c_str() << endl;
+                fout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
+                for (string i : res)
+                // printf("%s → ", i.c_str());
+                    fout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
+                // fout << Utf8ToGbk("最后三步") << endl;
+                for (int j = 2; j >= 0; --j) {
+                    fout << Utf8ToGbk(finder::find(requirement[j]));
+                    if (j)
+                        fout << Utf8ToGbk(rightArrow);
+                }
+                fout << endl << endl;
+            } else {
+                fout << Utf8ToGbk("输入数据不存在解法.").c_str() << endl << endl;
             }
-            fout << endl << endl;
         }
         #endif
     }
@@ -212,27 +220,36 @@ int main(int argc, char* argv[]) {
     res = ans[0].res;
     vector<int> requirement = ans[0].requirement;
     if (argc == 1) {
-        cout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
-        for (string i : res)
-        // printf("%s → ", i.c_str());
-            cout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
-        for (int j = 2; j >= 0; --j) {
-            cout << Utf8ToGbk(finder::find(requirement[j]));
-            if (j)
-                cout << Utf8ToGbk(rightArrow);
+        if (bestTimes != 114514) {
+            cout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
+            for (string i : res)
+            // printf("%s → ", i.c_str());
+                cout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
+            for (int j = 2; j >= 0; --j) {
+                cout << Utf8ToGbk(finder::find(requirement[j]));
+                if (j)
+                    cout << Utf8ToGbk(rightArrow);
+            }
+            cout << endl;
+        } else {
+            cout << Utf8ToGbk("输入数据不存在解法.").c_str() << endl << endl;
         }
-        cout << endl;
+        
     } else {
-        fout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
-        for (string i : res)
-        // printf("%s → ", i.c_str());
-            fout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
-        for (int j = 2; j >= 0; --j) {
-            fout << Utf8ToGbk(finder::find(requirement[j]));
-            if (j)
-                fout << Utf8ToGbk(rightArrow);
+        if (bestTimes != 114514) {
+            fout << Utf8ToGbk("最优解步数: ").c_str() << bestTimes + 3 << endl;
+            for (string i : res)
+            // printf("%s → ", i.c_str());
+                fout << Utf8ToGbk(i) << Utf8ToGbk(rightArrow);
+            for (int j = 2; j >= 0; --j) {
+                fout << Utf8ToGbk(finder::find(requirement[j]));
+                if (j)
+                    fout << Utf8ToGbk(rightArrow);
+            }
+            fout << endl;
+        } else {
+            fout << Utf8ToGbk("输入数据不存在解法.").c_str() << endl << endl;
         }
-        fout << endl;
     }
     #endif
 
